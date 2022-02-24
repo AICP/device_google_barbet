@@ -1,6 +1,7 @@
 [
   {
-    "repository": "device_google_redbull",
-    "target_path": "device/google/redbull"
+    "repository": "AICP/device_google_redbull",
+    "target_path": "device/google/redbull",
+    "branch":      "r11.1"
   }
 ]
