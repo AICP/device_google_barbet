@@ -26,6 +26,9 @@ $(call inherit-product, device/google/barbet/aosp_barbet.mk)
 
 -include device/google/barbet/device-lineage.mk
 
+# TWRP Support
+-include device/twrp/barbet/twrp.mk
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := aicp_barbet
 PRODUCT_BRAND := google

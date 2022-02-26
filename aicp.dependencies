@@ -3,5 +3,10 @@
     "repository": "AICP/device_google_redbull",
     "target_path": "device/google/redbull",
     "branch":      "r11.1"
+  },
+  {
+    "repository":  "AICP/device_twrp",
+    "target_path": "device/twrp/barbet",
+    "branch":      "barbet"
   }
 ]
