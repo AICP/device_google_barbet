@@ -37,4 +37,4 @@ AUDIO_FEATURE_CONFIG_ENABLE_TAS_SET_RE_IN_HAL := true
 
 -include device/google/barbet/soong/pixel_soong_config.mk
 
--include device/google/barbet/BoardConfigLineage.mk
+include device/google/barbet/BoardConfigLineage.mk
