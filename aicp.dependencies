@@ -1,11 +1,11 @@
 [
   {
-    "repository": "Siluxsept/device_google_redbull",
+    "repository": "AICP/device_google_redbull",
     "target_path": "device/google/redbull",
     "branch":      "s12.1"
   },
   {
-    "repository": "Siluxsept/kernel_google_barbet",
+    "repository": "AICP/kernel_google_barbet",
     "target_path": "kernel/google/barbet",
     "branch":      "s12.1"
   }
