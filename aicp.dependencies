@@ -1,6 +1,22 @@
 [
   {
-    "repository": "device_google_redbull",
+    "repository":  "AICP/device_google_redbull",
     "target_path": "device/google/redbull"
+  },
+  {
+    "remote":      "gitlab",
+    "repository":  "Siluxsept/vendor_gapps",
+    "target_path": "vendor/gapps",
+    "branch":      "tau"
+  },
+  {
+    "repository":  "AICP/kernel_google_redbull",
+    "target_path": "kernel/google/redbull"
+  },
+  {
+    "remote":      "gitlab",
+    "repository":  "hermesconrad/vendor/proprietary_vendor_ih8sn",
+    "target_path": "vendor/ih8sn",
+    "branch":      "t13.0"
   }
 ]
