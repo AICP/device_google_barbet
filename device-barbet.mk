@@ -20,14 +20,13 @@ DEVICE_PACKAGE_OVERLAYS += device/google/barbet/barbet/overlay
 
 PRODUCT_DEVICE_SVN_OVERRIDE := true
 
-include build/make/target/product/iorap_large_memory_config.mk
 include device/google/redbull/device-common.mk
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
 # Increment the SVN for any official public releases
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.svn=23
+    ro.vendor.build.svn=29
 
 # Enable watchdog timeout loop breaker.
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -93,8 +92,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/tas2562/TAS_FactoryApp:$(TARGET_COPY_OUT_VENDOR)/bin/TAS_FactoryApp
 endif
 
+# USB HAL
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service.barbet
+    android.hardware.usb-service.barbet
+PRODUCT_PACKAGES += \
+    android.hardware.usb.gadget-service.barbet
 
 # Vibrator HAL
 PRODUCT_PACKAGES += \

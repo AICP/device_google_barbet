@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common AICP stuff.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
 # Inherit device configuration
@@ -22,13 +22,9 @@ TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    DEVICE_MAINTAINERS="Ron H. (Siluxsept)" \
     TARGET_PRODUCT=barbet \
-    PRIVATE_BUILD_DESC="barbet-user 12   release-keys"
+    PRIVATE_BUILD_DESC="barbet-user 13 TQ1A.221205.011 8672226 release-keys"
 
-BUILD_FINGERPRINT := google/barbet/barbet:12/SQ3A.220705.003.A1/8672226:user/release-keys
-
-PRODUCT_OVERRIDE_INFO := true
-PRODUCT_OVERRIDE_FINGERPRINT := google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys
+BUILD_FINGERPRINT := google/barbet/barbet:13/TQ1A.221205.011/8672226:user/release-keys
 
 $(call inherit-product, vendor/google/barbet/barbet-vendor.mk)
