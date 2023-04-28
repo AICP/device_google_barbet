@@ -1,7 +1,9 @@
 [
   {
+    "remote":      "aicp",
     "repository":  "AICP/device_google_redbull",
-    "target_path": "device/google/redbull"
+    "target_path": "device/google/redbull",
+    "branch":      "t13.0"
   },
   {
     "remote":      "gitlab",
@@ -14,8 +16,16 @@
     "target_path": "kernel/google/redbull"
   },
   {
-    "repository":  "luk1337/ih8sn",
-    "target_path": "vendor/ih8sn",
-    "branch":      "master"
+    "remote":      "aicp",
+    "repository":  "TheMuppets/proprietary_vendor_google_barbet",
+    "target_path": "vendor/google/barbet",
+    "branch":      "lineage-20"
+  },
+  {
+    "remote":      "gitlab",
+    "repository":  "the-muppets/proprietary_vendor_firmware",
+    "target_path": "vendor/firmware",
+    "clone-depth": "1",
+    "branch":      "lineage-20"
   }
 ]
