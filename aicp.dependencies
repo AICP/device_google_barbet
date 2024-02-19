@@ -16,12 +16,6 @@
     "target_path": "kernel/google/redbull"
   },
   {
-    "remote":      "aicp",
-    "repository":  "TheMuppets/proprietary_vendor_google_barbet",
-    "target_path": "vendor/google/barbet",
-    "branch":      "lineage-20"
-  },
-  {
     "remote":      "gitlab",
     "repository":  "the-muppets/proprietary_vendor_firmware",
     "target_path": "vendor/firmware",
