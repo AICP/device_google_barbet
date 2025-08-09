@@ -3,23 +3,6 @@
     "remote":      "aicp",
     "repository":  "AICP/device_google_redbull",
     "target_path": "device/google/redbull",
-    "branch":      "t13.0"
-  },
-  {
-    "remote":      "gitlab",
-    "repository":  "Siluxsept/vendor_gapps",
-    "target_path": "vendor/gapps",
-    "branch":      "tau"
-  },
-  {
-    "repository":  "AICP/kernel_google_redbull",
-    "target_path": "kernel/google/redbull"
-  },
-  {
-    "remote":      "gitlab",
-    "repository":  "the-muppets/proprietary_vendor_firmware",
-    "target_path": "vendor/firmware",
-    "clone-depth": "1",
-    "branch":      "lineage-20"
+    "branch":      "v15.0"
   }
 ]

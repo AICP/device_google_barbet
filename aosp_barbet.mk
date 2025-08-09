@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_system.mk)
 
 # Enable mainline checking
-#PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := strict
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := strict
 
 #
 # All components inherited here go to system_ext image
@@ -38,6 +38,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 # All components inherited here go to vendor image
 #
 # TODO(b/136525499): move *_vendor.mk into the vendor makefile later
+TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 

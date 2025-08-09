@@ -16,6 +16,8 @@
 
 PRODUCT_HARDWARE := barbet
 
+USES_QCT_MODEM := true
+
 DEVICE_PACKAGE_OVERLAYS += device/google/barbet/barbet/overlay
 
 PRODUCT_DEVICE_SVN_OVERRIDE := true
@@ -26,7 +28,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 
 # Increment the SVN for any official public releases
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.svn=46
+    ro.vendor.build.svn=62
 
 # Enable watchdog timeout loop breaker.
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -41,10 +43,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 LOCAL_PATH := device/google/barbet
 
 PRODUCT_SOONG_NAMESPACES += \
-    device/google/barbet
-
-PRODUCT_PACKAGES += \
-    libtasspkrprot
+    device/google/barbet \
+    hardware/qcom/wlan/legacy
 
 # Audio XMLs for barbet
 PRODUCT_COPY_FILES += \
@@ -119,6 +119,11 @@ PRODUCT_PRODUCT_PROPERTIES +=\
     ro.vendor.vibrator.hal.lptrigger=0
 
 
+# Quick Start device-specific settings
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.quick_start.oem_id=00e0 \
+    ro.quick_start.device_id=barbet
+
 # Dumpstate HAL
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate@1.1-service.barbet
@@ -134,9 +139,6 @@ PRODUCT_COPY_FILES += \
 # Recovery
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.recovery.device.rc:recovery/root/init.recovery.barbet.rc
-
-PRODUCT_PACKAGES += \
-    sensors.$(PRODUCT_HARDWARE) \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/powerhint_$(PRODUCT_HARDWARE).json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint_$(PRODUCT_HARDWARE).json
@@ -158,6 +160,12 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint HIDL
 include device/google/barbet/fingerprint.mk
+
+# SurfaceFlinger configurations
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_display_power_timer_ms=1000
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_idle_timer_ms=0
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_touch_timer_ms=200
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 # NFC
 PRODUCT_COPY_FILES += \
@@ -189,3 +197,18 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     device/google/barbet/default-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions.xml
+
+# Workaround for Qualcomm neural network HAL
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-3.9.1-vendorcompat
+
+PRODUCT_PACKAGES += \
+    NfcOverlayBarbet
+
+# Gyotaku
+include device/google/gs-common/gyotaku_app/gyotaku.mk
+# Better Bug
+include device/google/gs-common/betterbug/betterbug.mk
+
+# Set soong config variable to control module build
+$(call soong_config_set,ctpm,enable_nr_dual_connectivity_qcril,true)

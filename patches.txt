@@ -1,3 +1,0 @@
-115447/1 https://gerrit.aicp-rom.com system/sepolicy true
-120260/2 https://gerrit.aicp-rom.com frameworks/base true
-120261/2 https://gerrit.aicp-rom.com frameworks/base true
