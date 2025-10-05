@@ -1,0 +1,8 @@
+[
+  {
+    "remote":      "aicp",
+    "repository":  "LineageOS/android_device_google_redbull",
+    "target_path": "device/google/redbull",
+    "branch":      "lineage-23.0"
+  }
+]
