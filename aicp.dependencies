@@ -1,8 +1,8 @@
 [
   {
     "remote":      "aicp",
-    "repository":  "LineageOS/android_device_google_redbull",
+    "repository":  "Siluxsept/device_google_redbull",
     "target_path": "device/google/redbull",
-    "branch":      "lineage-23.0"
+    "branch":      "w16.0"
   }
 ]
