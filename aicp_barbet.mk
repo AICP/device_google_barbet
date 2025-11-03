@@ -22,6 +22,10 @@ PRODUCT_NAME := aicp_barbet
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="Ron H. (Siluxsept)"
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="barbet-user 14 AP2A.240805.005.S4 12281092 release-keys" \
     BuildFingerprint=google/barbet/barbet:14/AP2A.240805.005.S4/12281092:user/release-keys \
