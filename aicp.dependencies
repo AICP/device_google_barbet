@@ -1,0 +1,8 @@
+[
+  {
+    "remote":      "aicp",
+    "repository":  "AICP/device_google_redbull",
+    "target_path": "device/google/redbull",
+    "branch":      "w16.1"
+  }
+]
